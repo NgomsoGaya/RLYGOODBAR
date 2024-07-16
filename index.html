@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant & Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Restaurant & Bar</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#book-table">Book a Table</a></li>
+                <li><a href="#events">Upcoming Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-buttons">
+            <button onclick="showCategory('meals')">Meals</button>
+            <button onclick="showCategory('drinks')">Drinks</button>
+        </div>
+        <div id="meals" class="menu-category">
+            <h3>Meals</h3>
+            <ul>
+                <li>Grilled Chicken - $12.99</li>
+                <li>Beef Steak - $15.99</li>
+                <li>Caesar Salad - $9.99</li>
+                <!-- Add more meals here -->
+            </ul>
+        </div>
+        <div id="drinks" class="menu-category" style="display: none;">
+            <h3>Drinks</h3>
+            <ul>
+                <li>Mojito - $6.99</li>
+                <li>Margarita - $7.99</li>
+                <li>Craft Beer - $5.99</li>
+                <!-- Add more drinks here -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="book-table">
+        <h2>Book a Table</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="event">
+            <img src="openmic.jpg" alt="Open Mic Event" class="event-image">
+            <div class="event-details">
+                <h3>Open Mic Night</h3>
+                <p>Join us for an exciting Open Mic Night where everyone is welcome to showcase their talents! Whether you're a singer, poet, comedian, or just love to perform, this is your chance to shine. Come enjoy a night of entertainment, good company, and great food and drinks!</p>
+                <p><strong>Date:</strong> July 25, 2024</p>
+                <p><strong>Time:</strong> 7:00 PM</p>
+                <p><strong>Location:</strong> Our Restaurant & Bar</p>
+            </div>
+        </div>
+        <div class="event">
+            <img src="perfomingartist.jpg" alt="Singer Event" class="event-image">
+            <div class="event-details">
+                <h3>Live Performance by Jane Doe</h3>
+                <p>Don't miss the amazing performance by the talented singer Jane Doe. Enjoy a night of soulful music, good vibes, and an unforgettable experience. Tickets are required for this event.</p>
+                <p><strong>Date:</strong> August 5, 2024</p>
+                <p><strong>Time:</strong> 8:00 PM</p>
+                <p><strong>Location:</strong> Our Restaurant & Bar</p>
+                <button class="buy-ticket" onclick="buyTicket()">Buy Ticket</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Restaurant & Bar. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
